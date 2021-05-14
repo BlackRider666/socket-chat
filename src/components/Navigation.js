@@ -1,13 +1,20 @@
 import React from 'react';
+import AddDMBtn from "./AddDMBtn";
+import AddChannelBtn from "./AddChannelBtn";
 
 const Navigation = (props) => {
   const {
-    displayForms,
-    id,
-    userLogout,
-    username,
-    guestUsername,
-    closeForm
+        displayForms,
+        id,
+        userLogout,
+        username,
+        guestUsername,
+        closeForm,
+        handleChange,
+        handleSubmit,
+        createChannel,
+        startConversation,
+        directMessageErrorLog
   } = props;
 
   return (
@@ -22,6 +29,17 @@ const Navigation = (props) => {
       >
         Live Chat
       </div>
+        <div>
+            <AddDMBtn
+                {...this.props}/>
+        </div>
+        <div className="userpanel__channels--add">
+            <AddChannelBtn
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                createChannel={createChannel}
+            />
+        </div>
       <div className="chatapp__navigation--user">
         {username ? <span>{username}</span> : null}
         {guestUsername ? <span>Guest-{guestUsername}</span> : null}

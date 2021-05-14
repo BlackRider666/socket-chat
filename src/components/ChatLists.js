@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import AddChannelBtn from './AddChannelBtn';
-import AddDMBtn from './AddDMBtn';
 
 export default class ChatLists extends Component {
   componentDidMount() {
@@ -10,9 +8,6 @@ export default class ChatLists extends Component {
   render() {
     const {
       usersChannels,
-      handleChange,
-      handleSubmit,
-      createChannel,
       removeChannel,
       joinChannel,
       usersDirectMessages,
@@ -23,14 +18,6 @@ export default class ChatLists extends Component {
     return (
       <div className="chatapp__userpanel--container">
         <div className="userpanel__channels--container">
-          {/*<div className="userpanel__channels--add">*/}
-          {/*  <p>Channels</p>*/}
-          {/*  <AddChannelBtn*/}
-          {/*    handleChange={handleChange}*/}
-          {/*    handleSubmit={handleSubmit}*/}
-          {/*    createChannel={createChannel}*/}
-          {/*  />*/}
-          {/*</div>*/}
           <div className="userpanel__channels--list">
             {usersChannels ? (
               <ul>
@@ -60,10 +47,6 @@ export default class ChatLists extends Component {
           </div>
         </div>
         <div className="userpanel__channels--container">
-          {/*<div className="userpanel__channels--add">*/}
-          {/*  <p>Private Messages</p>*/}
-          {/*  <AddDMBtn {...this.props} />*/}
-          {/*</div>*/}
           <div className="userpanel__channels--list">
             {usersDirectMessages ? (
               <ul>

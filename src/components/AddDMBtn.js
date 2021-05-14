@@ -27,15 +27,6 @@ export default class AddDMBtn extends Component {
       <div className="channel__add--popup">
         {this.state.showMenu ? (
           <div>
-            {directMessageErrorLog.length ? (
-              <Alert
-                header="Private Message Error"
-                content={
-                  directMessageErrorLog[directMessageErrorLog.length - 1]
-                    .response.data.error
-                }
-              />
-            ) : null}
             <div className="channel__search">
               <form onSubmit={startConversation}>
                 <input

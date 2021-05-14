@@ -546,6 +546,11 @@ class ChatUIContainer extends Component {
           userLogout={this.userLogout}
           closeForm={this.closeForm}
           {...this.state}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          createChannel={this.createChannel}
+          startConversation={this.startConversation}
+          directMessageErrorLog={''}
         />
         {this.state.formsMethod === 'login' && this.state.formsShown ? (
           <LoginForm

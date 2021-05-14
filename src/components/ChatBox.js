@@ -48,7 +48,7 @@ export default class ChatBox extends Component {
                                         : <p>{message.author[0].item.username || message.author[0].item.guestName}</p>
                                   }
                                 </div>
-                                <p className="speech--bubble--message">{message.body} <span className="speech--bubble--date">{Moment(message.createdAt).format('H:s')}</span></p>
+                                <p className="speech--bubble--message">{message.body} <span className="speech--bubble--date">{Moment(message.createdAt).format('H:m d.M.Y')}</span></p>
                               </div>
                             </li>
                         )
@@ -68,7 +68,7 @@ export default class ChatBox extends Component {
                                           <p>{message.author}</p>
                                   </div>
                                 }
-                                <p className="speech--bubble--message">{message.composedMessage} <span className="speech--bubble--date">{Moment(message.date).format('H:s')}</span></p>
+                                <p className="speech--bubble--message">{message.composedMessage} <span className="speech--bubble--date">{Moment(message.date).format('H:m d.M.Y')}</span></p>
                               </div>
                             </li>
 

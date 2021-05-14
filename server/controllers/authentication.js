@@ -63,6 +63,7 @@ exports.register = function(req, res, next) {
     let user = new User({
       username: username,
       password: password,
+
     });
 
     user.save(function(err, user) {

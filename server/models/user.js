@@ -18,7 +18,11 @@ const UserSchema = new Schema({
   usersChannels: {
     type: Array,
     default: []
-  }
+  },
+  roleId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Role',
+  },
 },
 {
   timestamps: true
